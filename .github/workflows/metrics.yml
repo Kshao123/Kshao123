@@ -17,6 +17,7 @@ jobs:
         with:
           responstry: 'Kshao123/metrics'
           fetch-depth: 0
+          ref: ${{ github.ref }}
           
       - name: 🐈‍⬛ Left
         uses: ./
