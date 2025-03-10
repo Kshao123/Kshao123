@@ -18,7 +18,13 @@ jobs:
           responstry: 'Kshao123/metrics'
           fetch-depth: 0
           ref: ${{ github.ref }}
-          
+          path: 'metrics'
+
+      - name: checkout path
+        run: |
+          ls
+          cd ./metrics
+        
       - name: 🐈‍⬛ Left
         uses: ./
         with:
