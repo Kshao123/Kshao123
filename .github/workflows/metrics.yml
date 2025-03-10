@@ -2,7 +2,7 @@
 name: Metrics
 on:
   # Schedule updates (each hour)
-  schedule: [{cron: "0 * * * *"}]
+  schedule: [{ cron: '0 0 * * *' }]
   # Lines below let you run workflow manually and on each commit
   workflow_dispatch:
   push: {branches: ["master", "main"]}
@@ -12,51 +12,51 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: lowlighter/metrics@latest
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
-          # Your GitHub token
-          # The following scopes are required:
-          #  - public_access (default scope)
-          # The following additional scopes may be required:
-          #  - read:org      (for organization related metrics)
-          #  - read:user     (for user related data)
-          #  - read:packages (for some packages related data)
-          #  - repo          (optional, if you want to include private repositories)
-          token: ${{ secrets.METRICS_TOKEN }}
-
-          # Options
-          user: Kshao123
-          template: classic
-          base: header, activity, community, repositories, metadata
-          config_timezone: Asia/Shanghai
+          responstry: 'Kshao123/metrics'
+          fetch-depth: 0
+          
+      - name: 🐈‍⬛ Left
+        uses: ./
+        with:
+          filename: assets/left.svg
+          base: header
+          base_indepth: yes
+          config_order: base.header, isocalendar, starts, achievements
+          plugin_isocalendar: yes
+          plugin_stars: yes
+          plugin_stars_limit: 3
           plugin_achievements: yes
           plugin_achievements_display: compact
-          plugin_achievements_secrets: yes
-          plugin_achievements_threshold: X
-          plugin_isocalendar: yes
-          plugin_isocalendar_duration: half-year
+          token: ${{ secrets.METRICS_TOKEN }}
+
+      - name: 🐈‍⬛ Rihgt
+        uses: ./
+        with:
+          config_order: spotify, steam
+          filename: assets/right.svg
+          base: ''
           plugin_music: yes
           plugin_music_limit: 4
           plugin_music_mode: playlist
           plugin_music_played_at: yes
-          plugin_music_playlist: https://open.spotify.com/playlist/09JBXDWkfQM56skfsMdLCz?si=8449475b01c542ff
+          plugin_music_playlist: https://open.spotify.com/embed/playlist/09JBXDWkfQM56skfsMdLCz?utm_source=generator
           plugin_music_provider: spotify
           plugin_music_time_range: short
           plugin_music_top_type: tracks
           plugin_music_user: tardis
-          plugin_screenshot: yes
-          plugin_screenshot_background: yes
-          plugin_screenshot_mode: image
-          plugin_screenshot_selector: body
-          plugin_screenshot_title: Screenshot
-          plugin_screenshot_url: https://ksh7.com
-          plugin_screenshot_viewport: 1280, 1280
-          plugin_stars: yes
-          plugin_stars_limit: 3
+          
+          plugin_steam_token: ${{ secrets.STEAM_TOKEN }}
           plugin_steam: yes
-          plugin_steam_achievements_limit: 2
+          plugin_steam_achievements_limit: 1
           plugin_steam_games_limit: 1
           plugin_steam_playtime_threshold: 2
           plugin_steam_recent_games_limit: 1
           plugin_steam_sections: player, most-played, recently-played
-          plugin_steam_user: 1746951424
+          plugin_steam_user: '746951424'
+          
+          token: ${{ secrets.METRICS_TOKEN }}
+          
+      
