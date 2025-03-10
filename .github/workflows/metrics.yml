@@ -24,12 +24,10 @@ jobs:
         run: |
           ls
           cd ./metrics
-          ls
-
-      - run: ls -la
+    
         
       - name: 🐈‍⬛ Left
-        uses: ./
+        uses: ./metrics
         with:
           filename: assets/left.svg
           base: header
@@ -43,7 +41,7 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN }}
 
       - name: 🐈‍⬛ Rihgt
-        uses: ./
+        uses: ./metrics
         with:
           config_order: spotify, steam
           filename: assets/right.svg
