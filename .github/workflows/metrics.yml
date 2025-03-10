@@ -24,6 +24,9 @@ jobs:
         run: |
           ls
           cd ./metrics
+          ls
+
+      - run: ls -la
         
       - name: 🐈‍⬛ Left
         uses: ./
