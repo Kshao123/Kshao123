@@ -15,7 +15,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          responstry: 'Kshao123/metrics'
+          repository: 'Kshao123/metrics'
           fetch-depth: 0
           ref: ${{ github.ref }}
           path: 'metrics'
