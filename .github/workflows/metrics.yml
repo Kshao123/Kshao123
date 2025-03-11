@@ -44,6 +44,10 @@ jobs:
           plugin_achievements: yes
           plugin_achievements_display: compact
           plugin_achievements_limit: 6
+
+          plugin_reactions: yes
+          plugin_reactions_limit: 100
+          plugin_reactions_details: percentage
           
           token: ${{ secrets.METRICS_TOKEN }}
 
@@ -79,11 +83,6 @@ jobs:
           plugin_pagespeed: yes
           plugin_pagespeed_token: ${{ secrets.PAGESPEED_TOKEN }}
           plugin_pagespeed_url: https://ksh7.com
-
-          plugin_reactions: yes
-          plugin_reactions_limit: 100
-          plugin_reactions_details: percentage
-
 
           # plugin_screenshot: yes
           # plugin_screenshot_background: yes
