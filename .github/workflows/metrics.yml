@@ -42,8 +42,8 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN }}
 
       - name: 🐈‍⬛ Rihgt
-        # uses: ./metrics
-        uses: lowlighter/metrics@latest
+        uses: ./metrics
+        # uses: lowlighter/metrics@latest
         with:
           config_order: spotify, steam
           filename: assets/right.svg
@@ -66,7 +66,7 @@ jobs:
           plugin_steam_playtime_threshold: 2
           plugin_steam_recent_games_limit: 1
           plugin_steam_sections: player, most-played, recently-played
-          plugin_steam_user: '746951424'
+          plugin_steam_user: '76561198381087331'
           
           token: ${{ secrets.METRICS_TOKEN }}
           
