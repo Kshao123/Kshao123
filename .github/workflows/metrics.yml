@@ -45,12 +45,13 @@ jobs:
         uses: ./metrics
         # uses: lowlighter/metrics@latest
         with:
-          config_order: spotify, steam
           filename: assets/right.svg
-          base: ''
+          base: footer
+          config_order: base.footer, steam, screenshot
+          
           plugin_music: yes
           plugin_music_limit: 4
-          plugin_music_mode: playlist
+          plugin_music_mode: recent
           plugin_music_played_at: yes
           plugin_music_playlist: https://open.spotify.com/embed/playlist/09JBXDWkfQM56skfsMdLCz?utm_source=generator
           plugin_music_provider: spotify
@@ -65,8 +66,17 @@ jobs:
           plugin_steam_games_limit: 1
           plugin_steam_playtime_threshold: 2
           plugin_steam_recent_games_limit: 1
-          plugin_steam_sections: player, most-played, recently-played
+          plugin_steam_sections: player, recently-played
           plugin_steam_user: '76561198381087331'
+
+          plugin_screenshot: yes
+          plugin_screenshot_background: yes
+          plugin_screenshot_mode: image
+          plugin_screenshot_selector: body
+          plugin_screenshot_title: Screenshot
+          plugin_screenshot_url: https://ksh7.com
+          plugin_screenshot_wait: 1000
+          plugin_screenshot_viewport: 1280, 1280
           
           token: ${{ secrets.METRICS_TOKEN }}
           
