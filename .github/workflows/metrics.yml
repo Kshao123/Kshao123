@@ -27,7 +27,8 @@ jobs:
     
         
       - name: 🐈‍⬛ Left
-        uses: ./metrics
+        # uses: ./metrics
+        uses: lowlighter/metrics@latest
         with:
           filename: assets/left.svg
           base: header
@@ -41,7 +42,8 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN }}
 
       - name: 🐈‍⬛ Rihgt
-        uses: ./metrics
+        # uses: ./metrics
+        uses: lowlighter/metrics@latest
         with:
           config_order: spotify, steam
           filename: assets/right.svg
@@ -55,6 +57,7 @@ jobs:
           plugin_music_time_range: short
           plugin_music_top_type: tracks
           plugin_music_user: tardis
+          plugin_music_token: ${{ secrets.SPOTIFY_TOKENS }}
           
           plugin_steam_token: ${{ secrets.STEAM_TOKEN }}
           plugin_steam: yes
