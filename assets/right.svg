@@ -27,7 +27,7 @@
                                 <div class="infos">
                                     <div class="name">第一次</div>
                                     <div class="artist">Michael Wong</div>
-                                    <div class="played-at">Played at 09:57:22 on 5 Jan 2026</div>
+                                    <div class="played-at">Played at 20:50:26 on 5 Jan 2026</div>
                                 </div>
                             </div>
                             <div class="track">
@@ -35,7 +35,7 @@
                                 <div class="infos">
                                     <div class="name">訣愛 (劇集《蒼蘭訣》片頭曲)</div>
                                     <div class="artist">Faye 詹雯婷</div>
-                                    <div class="played-at">Played at 09:52:52 on 5 Jan 2026</div>
+                                    <div class="played-at">Played at 20:46:07 on 5 Jan 2026</div>
                                 </div>
                             </div>
                             <div class="track">
@@ -43,7 +43,7 @@
                                 <div class="infos">
                                     <div class="name">Blueming</div>
                                     <div class="artist">IU</div>
-                                    <div class="played-at">Played at 09:49:52 on 5 Jan 2026</div>
+                                    <div class="played-at">Played at 20:43:00 on 5 Jan 2026</div>
                                 </div>
                             </div>
                             <div class="track">
@@ -51,7 +51,7 @@
                                 <div class="infos">
                                     <div class="name">Angel Baby</div>
                                     <div class="artist">Troye Sivan</div>
-                                    <div class="played-at">Played at 09:45:52 on 5 Jan 2026</div>
+                                    <div class="played-at">Played at 20:39:26 on 5 Jan 2026</div>
                                 </div>
                             </div>
                         </div>
@@ -236,18 +236,18 @@
                 <div class="row fill-width">
                     <section class="categories">
                         <div class="category column">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="50" height="50" class="gauge average">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="50" height="50" class="gauge high">
                                 <circle class="gauge-base" r="53" cx="60" cy="60"/>
-                                <circle class="gauge-arc" transform="rotate(-90 60 60)" r="53" cx="60" cy="60" stroke-dasharray="289.52 329"/>
-                                <text x="60" y="60" dominant-baseline="central">88</text>
+                                <circle class="gauge-arc" transform="rotate(-90 60 60)" r="53" cx="60" cy="60" stroke-dasharray="309.26 329"/>
+                                <text x="60" y="60" dominant-baseline="central">94</text>
                             </svg>
                             <span class="title">Performance</span>
                         </div>
                         <div class="category column">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="50" height="50" class="gauge average">
                                 <circle class="gauge-base" r="53" cx="60" cy="60"/>
-                                <circle class="gauge-arc" transform="rotate(-90 60 60)" r="53" cx="60" cy="60" stroke-dasharray="269.78 329"/>
-                                <text x="60" y="60" dominant-baseline="central">82</text>
+                                <circle class="gauge-arc" transform="rotate(-90 60 60)" r="53" cx="60" cy="60" stroke-dasharray="253.33 329"/>
+                                <text x="60" y="60" dominant-baseline="central">77</text>
                             </svg>
                             <span class="title">Accessibility</span>
                         </div>
